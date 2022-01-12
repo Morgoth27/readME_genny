@@ -3,7 +3,6 @@ const generateMD = (answers =>{
     return `
     <!DOCTYPE md>
     # ${answers.title}
-    Badge: https://img.shields.io/badge/${answers.badge.value}
 
 
 `})
@@ -22,4 +21,4 @@ const generateMD = (answers =>{
 // function renderLicenseSection(license) {}
 
 
-module.exports = generateREADME;
+module.exports = generateMD;
