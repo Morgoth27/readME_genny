@@ -32,46 +32,46 @@ const generateMD = (answers =>{
 
 ${renderLicenseBadge(answers.badge)}
 
-# Table of Contents
+## Table of Contents
 
-    ⭐ [Description](#description)
-    ⭐ [Installation](#install)
-    ⭐ [Dependencies](#dependency)
-    ⭐ [Technologies Used](#technology)
-    ⭐ [Author and Contact](#author)
+* [Description](#description)
+* [Installation](#installation-and-dependencies)
+* [Dependencies](#installation-and-dependencies)
+* [Technologies Used](#technologies-used)
+* [Author and Contact](#about-the-author)  
 
-# Description
+## Description
 -------------
 
 **${answers.title}**
 
-${answers.description}
+${answers.description}  
 
 
-# Installation & Dependencies
+## Installation and Dependencies
 -----------------------------
 
 ${answers.install}
 
-${answers.dependency}
+${answers.dependency}  
 
 
-# Technologies Used
+## Technologies Used
 -------------------
 
-${answers.technology}
+${answers.technology}  
 
 
-# About the Author
+## About the Author
 ------------------
 
 **${answers.author}**
 
-    🔸 Email: <${answers.email}>
+* Email: [${answers.email}](mailto:${answers.email})
 
-    🔸 GitHub: <${answers.git}>
+* [GitHub ](${answers.git})
 
-    🔸 LinkedIn: <${answers.linkedin}>
+* [LinkedIn ](${answers.linkedin})  
 
 
 ${renderLicenseLink(answers.badge)}

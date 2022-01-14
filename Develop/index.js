@@ -69,7 +69,8 @@ const questions = [
 ];
     
 function writeToFile (fileName, answers) {
-    return fs.writeFileSync(path.join(process.cwd(), fileName), answers);
+    // return fs.writeFileSync(path.join(process.cwd(), fileName), answers);
+    return fs.writeFileSync(path.join(fileName), answers);
 };
 
 
@@ -78,7 +79,7 @@ function init() {
     inquirer
         .prompt(questions)
         .then(answers => {
-            writeToFile('./output/README.md', generateMD({...answers}))
+            writeToFile(__dirname.replace('Develop', 'output/') + 'README.md', generateMD({...answers}))
             // const myMarkdown = markdown(answers); 
         })
 }
