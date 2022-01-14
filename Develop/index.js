@@ -53,7 +53,7 @@ const questions = [
         },
         {
             name: "git",
-            message: "GitHub URL:",
+            message: "GitHub URL starting with WWW:",
             type: "input",
         },
         {
@@ -63,7 +63,7 @@ const questions = [
         },
         {
             name: "linkedin",
-            message: "Linkedin URL:",
+            message: "Linkedin URL starting with WWW:",
             type: "input",
         },
 ];
@@ -74,7 +74,7 @@ function writeToFile (fileName, answers) {
 };
 
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     inquirer
         .prompt(questions)

@@ -69,11 +69,12 @@ ${answers.technology}
 
 * Email: [${answers.email}](mailto:${answers.email})
 
-* [GitHub ](${answers.git})
+* [GitHub ](http://${answers.git})
 
-* [LinkedIn ](${answers.linkedin})  
+* [LinkedIn ](http://${answers.linkedin})  
 
-
+## License
+----------
 ${renderLicenseLink(answers.badge)}
 `})
 
