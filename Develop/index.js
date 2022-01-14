@@ -42,6 +42,11 @@ const questions = [
             message: "Technologies used:",
             type: "input",
         },
+        {
+            name: "contribution",
+            message: "Contribution guidelines:",
+            type: "input",
+        },
         {   name: "msg1",
             message: "You will now be asked for your contact information. Press Y to continue.",
             type: "confirm",

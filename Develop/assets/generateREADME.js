@@ -38,6 +38,7 @@ ${renderLicenseBadge(answers.badge)}
 * [Installation](#installation-and-dependencies)
 * [Dependencies](#installation-and-dependencies)
 * [Technologies Used](#technologies-used)
+* [Contribution Guidelines](#contribution-guidelines)
 * [Author and Contact](#about-the-author)  
 
 ## Description
@@ -60,6 +61,12 @@ ${answers.dependency}
 -------------------
 
 ${answers.technology}  
+
+
+## Contribution Guidelines
+--------------------------
+
+${answers.contribution}    
 
 
 ## About the Author
