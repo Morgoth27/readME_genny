@@ -1,23 +1,26 @@
 // Packages needed for this application
 
 const fs = require('fs');
+const path = require('path');
 const inquirer = require('inquirer');
 const choices = require('inquirer/lib/objects/choices');
+const generateMD = require('./assets/generateREADME.js');
 // const { listenerCount } = require('process');
-const markdown = require('./assets/generateREADME.js')
+
 
 
 const questions = [
+
         {
             name: "badge",
             message: "What kind of license should your project have?",
             type: "list",
-            choices: ["MIT", "IBM"],
+            choices: ["MIT", "IBM", "MPL 2.0", "ODC BY", "PDDL", "ODbL", "WTFPL", "SIL", "ISC", "None"],
         },
         {
-            name: "title",
-            message: "Project title?",
+            message: "Project title:",
             type: "input",
+            name: "title",
         },
         {
             name: "description",
@@ -31,7 +34,7 @@ const questions = [
         },
         {
             name: "install",
-            message: "Any additional installation instructions?",
+            message: "Please provide installation instructions:",
             type: "input",
         },
         {
@@ -40,7 +43,8 @@ const questions = [
             type: "input",
         },
         {   name: "msg1",
-            message: "You will now be asked for your contact information.",
+            message: "You will now be asked for your contact information. Press Y to continue.",
+            type: "confirm",
         },
         {
             name: "author",
@@ -49,7 +53,7 @@ const questions = [
         },
         {
             name: "git",
-            message: "GitHub:",
+            message: "GitHub URL:",
             type: "input",
         },
         {
@@ -59,24 +63,23 @@ const questions = [
         },
         {
             name: "linkedin",
-            message: "Linkedin:",
+            message: "Linkedin URL:",
             type: "input",
         },
 ];
     
-//
+function writeToFile (fileName, answers) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), answers);
+};
 
-// function writeToFile('README.md', answers) {
-//     fs.writeFile
-
-// }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
-        .then (answers =>{
-            const myMarkdown = markdown(answers); 
+        .then(answers => {
+            writeToFile('./output/README.md', generateMD({...answers}))
+            // const myMarkdown = markdown(answers); 
         })
 }
 
